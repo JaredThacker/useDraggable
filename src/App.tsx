@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
+  const boxRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {}, []);
   return (
     <main>
-      <div className="container">
-        <div className="box"></div>
+      <div ref={containerRef} className="container">
+        <div ref={boxRef} className="box"></div>
       </div>
     </main>
   );
